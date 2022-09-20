@@ -7,26 +7,26 @@
     <link rel="icon" href="./favicon.ico">
     <title>请假详情</title>
     <link href="/css/page-home.2d389ded.css" rel="prefetch">
-    
+
     <!-- <link href="/js/page-home.33754602.js" rel="prefetch"> -->
-    
+
     <link href="../css/chunk-common.209299d0.css" rel="preload" as="style">
     <link href="../css/chunk-vendors.8c468b3e.css" rel="preload" as="style">
     <link href="../css/home.d6d81581.css" rel="preload" as="style">
-    
+
     <link href="../js/chunk-common.56aad48a.js" rel="preload" as="script">
     <link href="../js/chunk-vendors.9faeaa69.js" rel="preload" as="script">
-   <link href="../js/home.a80e0419.js" rel="preload" as="script">
-    
+    <link href="../js/home.a80e0419.js" rel="preload" as="script">
+
     <link href="../css/chunk-vendors.8c468b3e.css" rel="stylesheet">
     <link href="../css/chunk-common.209299d0.css" rel="stylesheet">
     <link href="../css/home.d6d81581.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_1921143_afl404vl6g.css">
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
-    
+
     <link rel="stylesheet" type="text/css" href="../css/page-home.2d389ded.css">
-     <script charset="utf-8" src="../js/jquery.min.js"></script>
+    <script charset="utf-8" src="../js/jquery.min.js"></script>
 
 </head>
 <body class="">
@@ -215,7 +215,7 @@
                                 <!---->
                                 <!---->
                             </div>
-                            
+
                         </div>
                         <span class="no-shrink">
 									<div class="btn-area flex jc-between no-shrink">
@@ -302,18 +302,18 @@
                                         </div>
                                     </div>
                                 </div>
-               
+
                             </div>
                         </div><!----></div>
                 </div>
             </div>
-    
-           
-            
+
+
+
         </div>
-        
-        
-        
+
+
+
         <div class="cat-personal-modal flex-center flex-1 h-screen w-screen h-screen absolute pin-l pin-t" id="s2"
              style="display: none;">
             <div class="personal-info-box px-15 py-15 radius-normal overflow-hidden">
@@ -363,7 +363,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
 <script src="https://gosspublic.alicdn.com/aliyun-oss-sdk-5.0.1.min.js"></script>
@@ -422,12 +422,12 @@
         document.getElementById('s4').style.display = 'none';
         document.getElementById('s5').style.display = '';
     }
-    
+
     function cancel() {
         document.getElementById('s2').style.display = 'none';
     }
-    
-    
+
+
     var date = new Date();
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
@@ -438,18 +438,18 @@
     hour = hour < 10 ? "0" + hour : hour;
     let minute = date.getMinutes();
     minute = minute < 10 ? "0" + minute : minute;
-    
+
     var show1 = function () {
         result = month + "-" + day + " " + "07" + ":" + "00";
         document.getElementById("time1").innerHTML = result;
     }
-    
+
     var show2 = function () {
         hour = hour + 4;
         result = month + "-" + day + " " + 20 + ":" + "00";
         document.getElementById("time2").innerHTML = result;
     }
-    
+
     var show3 = function () {
         day = day - 1;
         result = month + "-" + day + " " + "15" + ":" + "32";
@@ -463,7 +463,7 @@
     function gettime() {
         var ntm = Date.now();//获取当前时间戳（毫秒）
         var time = new Date(ntm);//毫秒转日期格式
-    
+
         //使用函数的方式进行定义
         function dateFormat(fmt, date) {
             var o = {
@@ -481,11 +481,11 @@
                     fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
             return fmt;
         }
-    
+
         var showtime = "当前时间:" + dateFormat("yyyy-MM-dd hh:mm:ss", time);
         document.getElementById('clock').innerHTML = showtime;
     }
-    
+
     show1();
     show2();
     show3();
